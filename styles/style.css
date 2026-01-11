@@ -1,0 +1,251 @@
+/* === BODY === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #dedede;
+  color: #333;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+body.dark {
+  background-color: #444;
+  color: #dedede;
+}
+
+/* === NAVIGATION === */
+.navbar {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  background-color: #2d8ec7;
+}
+
+.dark .navbar {
+  background-color: #13557c;
+}
+
+.navbar a {
+  padding: 0px 10px;
+  text-decoration: none;
+  border-right: solid 2px;
+  color: #000000;
+}
+
+.navbar .navbar-img a {
+  border: none;
+  padding-inline-end: 5px;
+}
+
+.dark .navbar a {
+  color: #fafafa;
+}
+
+.home-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40%;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  gap: 10px;
+}
+
+.nav-menu p {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+
+.dark .nav-menu {
+  background: #1e1e1e;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+/* === HAMBURGER === */
+.hamburger {
+  display: block;
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+
+/* === TOGGLE SWITCH === */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  position: initial;
+}
+
+.toggle {
+  width: 78px;
+  height: 36px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #5e83a3, #2f429f);
+  position: relative;
+  cursor: pointer;
+  box-shadow:
+    inset 0 2px 4px rgba(0,0,0,.15),
+    inset 0 -2px 4px rgba(255,255,255,.8);
+  transition: background .45s ease;
+}
+
+.dark .toggle {
+  background: linear-gradient(180deg, #2b2b2b, #1c1c1c);
+  box-shadow:
+    inset 0 2px 6px rgba(0,0,0,.6),
+    inset 0 -1px 2px rgba(255,255,255,.05);
+}
+
+.theme-toggle input { display: none; }
+
+.toggle .icon {
+  position: absolute;
+  top: 7px;
+  font-size: 18px;
+  transition: opacity .35s ease, transform .45s cubic-bezier(.34,1.56,.64,1);
+  user-select: none;
+}
+
+.toggle .sun {
+  left: 12px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toggle .moon {
+  right: 12px;
+  opacity: 0;
+  transform: translateX(8px);
+}
+
+.toggle .knob {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff, #eaeaea);
+  box-shadow:
+    0 6px 14px rgba(0,0,0,.25),
+    inset 0 1px 1px rgba(255,255,255,.9);
+  transition:
+    transform .45s cubic-bezier(.34,1.56,.64,1),
+    box-shadow .45s ease;
+}
+
+body.dark .toggle .knob {
+  transform: translateX(42px);
+  box-shadow:
+    0 0 14px rgba(120,170,255,.6),
+    0 6px 14px rgba(0,0,0,.35),
+    inset 0 1px 1px rgba(255,255,255,.2);
+}
+
+body.dark .toggle .sun {
+  opacity: 0;
+  transform: translateX(-8px);
+}
+
+body.dark .toggle .moon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toggle:active .knob {
+  transform: scale(.96) translateX(0);
+}
+
+body.dark .toggle:active .knob {
+  transform: scale(.96) translateX(42px);
+}
+
+/* === PROFILE === */
+.profile-img {
+  height: 200px;
+  border-radius: 50%;
+}
+
+.profile h1 {
+  margin: 10px 0px 0px;
+}
+
+.profile h3 {
+  margin: 0px;
+}
+
+/* === CONTENT === */
+
+/* --- CONTENT TEXT --- */
+.content {
+  padding: 0px 20px 10px;
+}
+
+.content h2 {
+  margin: 0px 0px 15px;
+}
+
+.content p {
+  margin: 0px 0px 5px;
+}
+
+/* --- CONTENT TABLE --- */
+.table table {
+  border-collapse: collapse;
+}
+
+.table-title {
+  background-color: #cf1616bd;
+  color: #fff;
+  font-weight: bold;
+}
+
+.dark .table-title {
+  background-color: #b92525bd;
+}
+
+.table-title td {
+  border: 4px solid #8688c5;
+  padding: 5px;
+}
+
+.table-fill td {
+  border: 4px solid #8688c5;
+  padding: 7px;
+}
+
+.table p {
+  margin: 0px;
+}
+
+/* === FOOTER === */
+.footer {
+  padding: 18px;
+  font-size: 18px;
+  background-color: #28c34a;
+  color: #fff;
+  text-align: center;
+}
+
+.footer a {
+  color: #0f096b;
+  text-decoration: none;
+}
+
+.dark .footer {
+  background-color: #0f7c27;
+}
